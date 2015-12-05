@@ -10,6 +10,7 @@
 
   <change-notes><![CDATA[
       0.1.1 Bugfix - numbers can be used in identifiers
+      <br><br>
       0.1.0 Basic Cypher support - highlight, errors, commenting.
     ]]></change-notes>
 
