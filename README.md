@@ -6,7 +6,11 @@ Plugin provides [Cypher](http://www.opencypher.org/) language support for Intell
 It will use files with `.cyp` extension.
 Also Cypher language can be injected in any string (i.e. in Java).
 
+**WARNING:** Currently plugin is in early alpha. Bugs, crashes, incompatibilities may occur.
+
 ## Installation
+
+Plugin should be available in Jetbrains repositories somewhere in near future.
 
 **Manual:**
 
