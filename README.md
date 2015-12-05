@@ -8,6 +8,21 @@ Also Cypher language can be injected in any string (i.e. in Java).
 
 **WARNING:** Currently plugin is in early alpha. Bugs, crashes, incompatibilities may occur.
 
+## Supported Jetbrains products
+
+* IntelliJ IDEA - **tested**.
+* RubyMine
+* WebStorm
+* PhpStorm
+* PyCharm
+* AppCode
+* Android Studio
+* 0xDBE
+* CLion
+
+Plugin is not tested (yet) with all existing Jetbrains products. However it should work
+without any issues.
+
 ## Installation
 
 Plugin should be available in Jetbrains repositories somewhere in near future.
@@ -23,16 +38,16 @@ Plugin should be available in Jetbrains repositories somewhere in near future.
 
 ## Known issues
 
-* Using keyword or function name, as variable will break lexer.
+* Using keyword or function name as identifier will break lexer.
 * Error description is not really usable (internal naming).
 
 ## Roadmap
 
 1. Stabilize grammar.
 2. Make parser errors readable.
-3. Code completion
-4. References (find usages/renaming/etc)
-5. Grammar error recovery tuning
+3. Code completion.
+4. References (find usages/renaming/etc).
+5. Grammar error recovery tuning.
 
 ## Screenshots
 
