@@ -22,6 +22,14 @@ Also Cypher language can be injected in any string (i.e. in Java).
 * Using keyword or function name, as variable will break lexer.
 * Error description is not really usable (internal naming).
 
+## Roadmap
+
+1. Stabilize grammar.
+2. Make parser errors readable.
+3. Code completion
+4. References (find usages/renaming/etc)
+5. Grammar error recovery tuning
+
 ## Screenshots
 
 ![cypher_syntax_highlight](screenshots/cypher_syntax_highlight.png)
