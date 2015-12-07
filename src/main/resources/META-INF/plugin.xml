@@ -10,9 +10,12 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        0.1.2 Parser error reporting improved.
+        <br><br>
         0.1.1 Bugfix - numbers can be used in identifiers
         <br><br>
         0.1.0 Basic Cypher support - highlight, errors, commenting.
+        <br>
         ]]></change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
