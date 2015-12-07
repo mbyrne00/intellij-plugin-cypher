@@ -23,8 +23,9 @@ intellij {
     downloadSources true
 
     publish {
-        pluginId 'com.neueda4j.intellij.plugin.cypher'
-        channel 'nightly'
+        pluginId '8087'
+        username intellijUsername ?: ''
+        password intellijPassword ?: ''
     }
 }
 
