@@ -1,5 +1,6 @@
 Cypher Intellij Plugin
 ======================
+[![HuBoard task board for this project](https://img.shields.io/badge/Hu-Board-7965cc.svg)](https://huboard.com/FylmTM/intellij-plugin-cypher)
 
 Plugin provides [Cypher](http://www.opencypher.org/) language support for IntelliJ IDE.
 
