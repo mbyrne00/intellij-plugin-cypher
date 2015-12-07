@@ -14,6 +14,9 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+// updating this version would automatically updates plugins version
+version '0.1.2'
+
 intellij {
     version '15.0'
     pluginName 'Cypher'
@@ -21,8 +24,6 @@ intellij {
 
     publish {
         pluginId 'com.neueda4j.intellij.plugin.cypher'
-        username intellijUsername
-        password intellijPassword
         channel 'nightly'
     }
 }
@@ -30,6 +31,7 @@ intellij {
 sourceSets {
     main {
         java {
+            // Add sources ganared by Grammar-Kit for parser to build.
             srcDirs 'src/main/java', 'gen'
         }
     }

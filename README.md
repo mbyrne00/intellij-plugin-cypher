@@ -6,9 +6,9 @@ Plugin provides [Cypher](http://www.opencypher.org/) language support for Intell
 It will use files with `.cyp` extension.
 Also Cypher language can be injected in any string (i.e. in Java).
 
-**WARNING:** Currently plugin is in early alpha. Bugs, crashes, incompatibilities may occur.
+**WARNING:** Currently plugin is in early alpha. Bugs, crashes and incompatibilities may occur.
 
-## Supported Jetbrains products
+# Supported Jetbrains products
 
 * IntelliJ IDEA - **tested**.
 * RubyMine
@@ -23,11 +23,11 @@ Also Cypher language can be injected in any string (i.e. in Java).
 Plugin is not tested (yet) with all existing Jetbrains products. However it should work
 without any issues.
 
-## Installation
+# Installation
 
 Plugin should be available in Jetbrains repositories somewhere in near future.
 
-**Manual:**
+### Manual
 
 1. Navigate to [releases](https://github.com/FylmTM/intellij-plugin-cypher/releases) page.
 2. Pick most recent release.
@@ -36,12 +36,12 @@ Plugin should be available in Jetbrains repositories somewhere in near future.
 5. Select downloaded plugin.
 6. Restart IDE.
 
-## Known issues
+# Known issues
 
 * Using keyword or function name as identifier will break lexer.
 * Error description is not really usable (internal naming).
 
-## Roadmap
+# Roadmap
 
 1. Stabilize grammar.
 2. Make parser errors readable.
@@ -49,17 +49,23 @@ Plugin should be available in Jetbrains repositories somewhere in near future.
 4. References (find usages/renaming/etc).
 5. Grammar error recovery tuning.
 
-## Screenshots
+# Screenshots
 
 ![cypher_syntax_highlight](screenshots/cypher_syntax_highlight.png)
 
-## Development
+# Development
 
 Gradle is used as build system. 
 
-**Run Idea to test plugin:** `gradle runIdea`
+```shell
+# Build plugin distribution
+./gradlew buildPlugin 
 
-#### Grammar
+# Run idea in development mode
+./gradlew runIdea
+```
+
+### Grammar
 
 Cypher grammar is located here - `src/main/java/com/neueda4j/intellij/plugin/cypher/lexer/Cypher.bnf`
 
@@ -68,4 +74,10 @@ After grammar change:
 * Generate parser code for grammar
 * Generate jFlex `.lexer` for grammar
 * Generate lexer code from `.lexer`
+
+# License
+
+Copyright © 2015 Dmitry Vrublevsky
+
+Released under the Apache 2.0 License.
 
