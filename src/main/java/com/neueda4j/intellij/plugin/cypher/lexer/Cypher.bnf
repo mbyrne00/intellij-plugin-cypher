@@ -175,7 +175,7 @@ DropIndex ::= K_DROP K_INDEX K_ON NodeLabel "(" PropertyKeyName ")"
 UniqueConstraintSyntax ::= K_CONSTRAINT K_ON "(" Identifier NodeLabel ")" K_ASSERT PropertyExpression K_IS K_UNIQUE
 NodePropertyExistenceConstraintSyntax ::= K_CONSTRAINT K_ON "(" Identifier NodeLabel ")" K_ASSERT K_EXISTS "(" PropertyExpression ")"
 RelationshipPropertyExistenceConstraintSyntax ::= K_CONSTRAINT K_ON RelationshipPatternSyntax K_ASSERT K_EXISTS "(" PropertyExpression ")"
-RelationshipPatternSyntax ::= ("()-[" Identifier RelType "]-()") // todo: move this to literals
+RelationshipPatternSyntax ::= ("()-[" Identifier RelType "]-()")
       | ("()-[" Identifier RelType "]->()")
       | ("()<-[" Identifier RelType "]-()")
 
@@ -200,7 +200,6 @@ Clause ::= LoadCSV
     | Foreach
     | With
     | Return
-    //| Pragma // todo: what the hell is this?
 
 //-- BulkImportQuery
 BulkImportQuery ::= PeriodicCommitHint LoadCSVQuery
@@ -364,7 +363,7 @@ private Expression1 ::= NumberLiteral
               | FunctionInvocation
               | Identifier
 
-PropertyLookup ::= "." PropertyKeyName // todo: finish this rule, legacy part is missing
+PropertyLookup ::= "." PropertyKeyName
 ListComprehension ::= "[" FilterExpression ("|"  Expression)? "]"
 FilterExpression ::= IdInColl (K_WHERE)? Expression
 IdInColl ::= Identifier K_IN Expression

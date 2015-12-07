@@ -6,6 +6,7 @@ import com.intellij.openapi.editor.colors.TextAttributesKey;
 import com.intellij.openapi.fileTypes.SyntaxHighlighterBase;
 import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IElementType;
+import com.neueda4j.intellij.plugin.cypher.psi.CypherTokenType;
 import com.neueda4j.intellij.plugin.cypher.psi.CypherTypes;
 import org.jetbrains.annotations.NotNull;
 
@@ -46,7 +47,7 @@ public class CypherSyntaxHighlighter extends SyntaxHighlighterBase {
         if (tokenType.equals(CypherTypes.BLOCKCOMMENT)) {
             return BLOCK_COMMENT_KEYS;
         }
-        if (tokenType.toString().startsWith("Token.K_")) {
+        if (isKeywordTokenType(tokenType)) {
             return KEYWORD_KEYS;
         }
         if (tokenType.equals(CypherTypes.L_IDENTIFIER) || tokenType.equals(CypherTypes.L_IDENTIFIER_TEXT)) {
@@ -79,7 +80,7 @@ public class CypherSyntaxHighlighter extends SyntaxHighlighterBase {
         if (tokenType.equals(CypherTypes.OP_DOT)) {
             return DOT_KEYS;
         }
-        if (operationTokenType(tokenType)) {
+        if (isOperationTokenType(tokenType)) {
             return OPERATION_SIGN_KEYS;
         }
         if (tokenType.equals(TokenType.BAD_CHARACTER)) {
@@ -88,7 +89,15 @@ public class CypherSyntaxHighlighter extends SyntaxHighlighterBase {
         return EMPTY_KEYS;
     }
 
-    private boolean operationTokenType(IElementType tokenType) {
+    private boolean isKeywordTokenType(IElementType tokenType) {
+        if (tokenType instanceof CypherTokenType) {
+            CypherTokenType cypherTokenType = (CypherTokenType) tokenType;
+            return cypherTokenType.getOriginalName().startsWith("K_");
+        }
+        return false;
+    }
+
+    private boolean isOperationTokenType(IElementType tokenType) {
         return tokenType.equals(CypherTypes.OP_BACTICK)
                 || tokenType.equals(CypherTypes.OP_COLON)
                 || tokenType.equals(CypherTypes.OP_DIVIDE)

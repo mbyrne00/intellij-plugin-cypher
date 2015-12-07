@@ -3151,7 +3151,7 @@ public class CypherParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // ("()-[" Identifier RelType "]-()") // todo: move this to literals
+  // ("()-[" Identifier RelType "]-()")
   //       | ("()-[" Identifier RelType "]->()")
   //       | ("()<-[" Identifier RelType "]-()")
   public static boolean RelationshipPatternSyntax(PsiBuilder b, int l) {
