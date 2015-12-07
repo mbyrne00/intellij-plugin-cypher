@@ -2,12 +2,16 @@ Cypher Intellij Plugin
 ======================
 [![HuBoard task board for this project](https://img.shields.io/badge/Hu-Board-7965cc.svg)](https://huboard.com/FylmTM/intellij-plugin-cypher)
 
-Plugin provides [Cypher](http://www.opencypher.org/) language support for IntelliJ IDE.
+Plugin provides [Cypher](http://www.opencypher.org/) query language support for Jetbrains IDE family.
 
-It will use files with `.cyp` extension.
-Also Cypher language can be injected in any string (i.e. in Java).
+**WARNING:** Currently plugin is in alpha-stage. If any bugs, incompatibilities or other issues occurs - report
+by creating issue on Github.
 
-**WARNING:** Currently plugin is in early alpha. Bugs, crashes and incompatibilities may occur.
+# Features
+
+* Cypher query highlight in `.cyp` files
+* Cypher language injection into strings (Java, PHP and others)
+* Parser errors for invalid Cypher queries
 
 # Supported Jetbrains products
 
@@ -26,7 +30,7 @@ without any issues.
 
 # Installation
 
-Plugin should be available in Jetbrains repositories somewhere in near future.
+Plugin should be available via Jetbrains repositories somewhere in near future.
 
 ### Manual
 
