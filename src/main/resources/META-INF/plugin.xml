@@ -24,6 +24,8 @@
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.lang</depends>
+    <depends optional="true">com.intellij.modules.java</depends>
+    <depends optional="true" config-file="intellilang-cypher-support.xml">org.intellij.intelliLang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
@@ -36,6 +38,7 @@
         <lang.commenter language="Cypher" implementationClass="com.neueda4j.intellij.plugin.cypher.commenter.CypherCommenter"/>
 
         <colorSettingsPage implementation="com.neueda4j.intellij.plugin.cypher.settings.CypherColorSettingsPage"/>
+
     </extensions>
 
     <actions>

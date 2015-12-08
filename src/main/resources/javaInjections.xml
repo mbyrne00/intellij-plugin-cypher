@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="LanguageInjectionConfiguration">
+    <injection language="Cypher" injector-id="java">
+        <display-name>GraphDatabaseService (org.neo4j.graphdb)</display-name>
+        <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("execute").withParameters("java.lang.String", "java.util.Map").definedInClass("org.neo4j.graphdb.GraphDatabaseService"))]]></place>
+        <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("execute").withParameters("java.lang.String").definedInClass("org.neo4j.graphdb.GraphDatabaseService"))]]></place>
+    </injection>
+</component>
