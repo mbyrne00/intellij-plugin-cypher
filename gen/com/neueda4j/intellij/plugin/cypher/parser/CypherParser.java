@@ -3906,14 +3906,14 @@ public class CypherParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // !<<eof>> Statement ';'
+  // !<<eof>> Statement ';'?
   static boolean StatementItem(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "StatementItem")) return false;
     boolean r;
     Marker m = enter_section_(b);
     r = StatementItem_0(b, l + 1);
     r = r && Statement(b, l + 1);
-    r = r && consumeToken(b, SEMICOLON);
+    r = r && StatementItem_2(b, l + 1);
     exit_section_(b, m, null, r);
     return r;
   }
@@ -3926,6 +3926,13 @@ public class CypherParser implements PsiParser, LightPsiParser {
     r = !eof(b, l + 1);
     exit_section_(b, l, m, null, r, false, null);
     return r;
+  }
+
+  // ';'?
+  private static boolean StatementItem_2(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "StatementItem_2")) return false;
+    consumeToken(b, SEMICOLON);
+    return true;
   }
 
   /* ********************************************************** */

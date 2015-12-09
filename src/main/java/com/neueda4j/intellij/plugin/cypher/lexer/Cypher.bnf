@@ -144,7 +144,7 @@
 
 cypher ::= StatementItem *
 
-private StatementItem ::= !<<eof>> Statement ';'
+private StatementItem ::= !<<eof>> Statement ';'?
 
 /*************************
  * Statement
