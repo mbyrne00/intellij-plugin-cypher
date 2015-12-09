@@ -34,7 +34,8 @@ public class CypherSyntaxHighlighter extends SyntaxHighlighterBase {
     private static final TextAttributesKey[] OPERATION_SIGN_KEYS = new TextAttributesKey[]{CypherTextAttributeKey.OPERATION_SIGN};
     private static final TextAttributesKey[] SEMICOLON_KEYS = new TextAttributesKey[]{CypherTextAttributeKey.SEMICOLON};
     private static final TextAttributesKey[] PARENTHESES_KEYS = new TextAttributesKey[]{CypherTextAttributeKey.PARENTHESES};
-    private static final TextAttributesKey[] BRACKETS_KEYS = new TextAttributesKey[]{CypherTextAttributeKey.BRACKETS};
+    private static final TextAttributesKey[] CURLY_BRACES_KEYS = new TextAttributesKey[]{CypherTextAttributeKey.CURLY_BRACES};
+    private static final TextAttributesKey[] SQUARE_BRACES_KEYS = new TextAttributesKey[]{CypherTextAttributeKey.SQUARE_BRACES};
     private static final TextAttributesKey[] COMMA_KEYS = new TextAttributesKey[]{CypherTextAttributeKey.COMMA};
     private static final TextAttributesKey[] DOT_KEYS = new TextAttributesKey[]{CypherTextAttributeKey.DOT};
 
@@ -69,10 +70,12 @@ public class CypherSyntaxHighlighter extends SyntaxHighlighterBase {
             return PARENTHESES_KEYS;
         }
         if (tokenType.equals(CypherTypes.BRACKET_CURLYOPEN)
-                || tokenType.equals(CypherTypes.BRACKET_CURLYCLOSE)
-                || tokenType.equals(CypherTypes.BRACKET_SQUAREOPEN)
+                || tokenType.equals(CypherTypes.BRACKET_CURLYCLOSE)) {
+            return CURLY_BRACES_KEYS;
+        }
+        if (tokenType.equals(CypherTypes.BRACKET_SQUAREOPEN)
                 || tokenType.equals(CypherTypes.BRACKET_SQUARECLOSE)) {
-            return BRACKETS_KEYS;
+            return SQUARE_BRACES_KEYS;
         }
         if (tokenType.equals(CypherTypes.OP_COMMA)) {
             return COMMA_KEYS;

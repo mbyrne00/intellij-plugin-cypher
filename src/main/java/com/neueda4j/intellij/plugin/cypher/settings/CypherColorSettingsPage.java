@@ -31,7 +31,8 @@ public class CypherColorSettingsPage implements ColorSettingsPage {
             new AttributesDescriptor("Semicolon", CypherTextAttributeKey.SEMICOLON),
             new AttributesDescriptor("Operation sign", CypherTextAttributeKey.OPERATION_SIGN),
             new AttributesDescriptor("Parentheses", CypherTextAttributeKey.PARENTHESES),
-            new AttributesDescriptor("Brackets", CypherTextAttributeKey.BRACKETS),
+            new AttributesDescriptor("Curly braces", CypherTextAttributeKey.CURLY_BRACES),
+            new AttributesDescriptor("Square braces", CypherTextAttributeKey.SQUARE_BRACES),
             new AttributesDescriptor("Comma", CypherTextAttributeKey.COMMA),
             new AttributesDescriptor("Dot", CypherTextAttributeKey.DOT),
 

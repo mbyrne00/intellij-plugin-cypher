@@ -56,7 +56,7 @@ Plugin should be available via Jetbrains repositories somewhere in near future.
 
 # Screenshots
 
-![cypher_syntax_highlight](screenshots/cypher_syntax_highlight.png)
+![cypher_syntax_highlight](screenshots/cypher.png)
 
 # Development
 

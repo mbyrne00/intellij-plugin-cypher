@@ -18,12 +18,13 @@ public class CypherTextAttributeKey {
 
     public static final TextAttributesKey KEYWORD = createTextAttributesKey("CYPHER_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD);
     public static final TextAttributesKey IDENTIFIER = createTextAttributesKey("CYPHER_IDENTIFIER", DefaultLanguageHighlighterColors.IDENTIFIER);
-    public static final TextAttributesKey FUNCTION_NAME = createTextAttributesKey("CYPHER_FUNCTION_NAME", DefaultLanguageHighlighterColors.KEYWORD);
+    public static final TextAttributesKey FUNCTION_NAME = createTextAttributesKey("CYPHER_FUNCTION_NAME", DefaultLanguageHighlighterColors.FUNCTION_CALL);
 
     public static final TextAttributesKey SEMICOLON = createTextAttributesKey("CYPHER_SEMICOLON", DefaultLanguageHighlighterColors.SEMICOLON);
     public static final TextAttributesKey OPERATION_SIGN = createTextAttributesKey("CYPHER_OPERATION", DefaultLanguageHighlighterColors.OPERATION_SIGN);
     public static final TextAttributesKey PARENTHESES = createTextAttributesKey("CYPHER_PARENTHESES", DefaultLanguageHighlighterColors.PARENTHESES);
-    public static final TextAttributesKey BRACKETS = createTextAttributesKey("CYPHER_BRACKETS", DefaultLanguageHighlighterColors.BRACKETS);
+    public static final TextAttributesKey CURLY_BRACES = createTextAttributesKey("CYPHER_CURLY_BRACES", DefaultLanguageHighlighterColors.BRACKETS);
+    public static final TextAttributesKey SQUARE_BRACES = createTextAttributesKey("CYPHER_SQUARE_BRACES", DefaultLanguageHighlighterColors.BRACKETS);
     public static final TextAttributesKey COMMA = createTextAttributesKey("CYPHER_COMMA", DefaultLanguageHighlighterColors.COMMA);
     public static final TextAttributesKey DOT = createTextAttributesKey("CYPHER_DOT", DefaultLanguageHighlighterColors.DOT);
 
