@@ -26,7 +26,6 @@ intellij {
         pluginId '8087'
         username intellijUsername ?: ''
         password intellijPassword ?: ''
-        channel 'alpha'
     }
 }
 
