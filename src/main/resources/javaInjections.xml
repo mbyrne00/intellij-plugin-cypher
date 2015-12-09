@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="LanguageInjectionConfiguration">
+    <!-- Graph Database Service -->
     <injection language="Cypher" injector-id="java">
         <display-name>GraphDatabaseService (org.neo4j.graphdb)</display-name>
         <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("execute").withParameters("java.lang.String", "java.util.Map").definedInClass("org.neo4j.graphdb.GraphDatabaseService"))]]></place>
         <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("execute").withParameters("java.lang.String").definedInClass("org.neo4j.graphdb.GraphDatabaseService"))]]></place>
     </injection>
+
+    <!-- Neo4j OGM -->
+    <injection language="Cypher" injector-id="java">
+        <display-name>Session (org.neo4j.ogm.session)</display-name>
+        <place><![CDATA[psiParameter().ofMethod(1, psiMethod().withName("queryForObject").withParameters("java.lang.Class", "java.lang.String", "java.util.Map").definedInClass("org.neo4j.ogm.session.Capability.ExecuteQueries"))]]></place>
+        <place><![CDATA[psiParameter().ofMethod(1, psiMethod().withName("query").withParameters("java.lang.Class", "java.lang.String", "java.util.Map").definedInClass("org.neo4j.ogm.session.Capability.ExecuteQueries"))]]></place>
+        <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("query").withParameters("java.lang.String", "java.util.Map").definedInClass("org.neo4j.ogm.session.Capability.ExecuteQueries"))]]></place>
+        <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("query").withParameters("java.lang.String", "java.util.Map", "boolean").definedInClass("org.neo4j.ogm.session.Capability.ExecuteQueries"))]]></place>
+        <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("execute").withParameters("java.lang.String", "java.util.Map").definedInClass("org.neo4j.ogm.session.Session"))]]></place>
+    </injection>
+
+    <!-- Spring Data Neo4j -->
+    <injection language="Cypher" injector-id="java">
+        <display-name>Query.value (org.springframework.data.neo4j.annotation)</display-name>
+        <place><![CDATA[psiMethod().withName("value").withParameters().definedInClass("org.springframework.data.neo4j.annotation.Query")]]></place>
+    </injection>
+
 </component>
