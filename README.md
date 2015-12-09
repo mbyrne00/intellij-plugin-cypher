@@ -10,8 +10,19 @@ by creating issue on Github.
 # Features
 
 * Cypher query highlight in `.cyp` files
-* Cypher language injection into strings (Java, PHP and others)
+* Customizable Cypher highlight 
+* Cypher language injection into other language strings (Java, PHP, ...)
 * Parser errors for invalid Cypher queries
+* Automatic Cypher language injection into
+  * Neo4j `GraphDatabaseService::execute` methods
+  * SDN `@Query` annotations
+  * Neo4j OGM `Session` class - `queryForObject`, `query` and `execute` methods.
+
+# Installation
+
+Plugin is available via Jetbrains repositories.
+
+Go to `Preferences` -> `Plugins` -> `Browser repositories...` and search for "Cypher". Install plugin and restart your IDE.
 
 # Supported Jetbrains products
 
@@ -28,23 +39,13 @@ by creating issue on Github.
 Plugin is not tested (yet) with all existing Jetbrains products. However it should work
 without any issues.
 
-# Installation
-
-Plugin should be available via Jetbrains repositories somewhere in near future.
-
-### Manual
-
-1. Navigate to [releases](https://github.com/FylmTM/intellij-plugin-cypher/releases) page.
-2. Pick most recent release.
-3. Download `Cypher.zip` file.
-4. Go to your Intellij IDE preferences `Plugins` -> `Install plugin from disk...`.
-5. Select downloaded plugin.
-6. Restart IDE.
-
 # Known issues
 
 * Using keyword or function name as identifier will break lexer.
-* Error description is not really usable (internal naming).
+
+# Screenshots
+
+![cypher_syntax_highlight](screenshots/cypher.png)
 
 # Roadmap
 
@@ -54,9 +55,6 @@ Plugin should be available via Jetbrains repositories somewhere in near future.
 4. References (find usages/renaming/etc).
 5. Grammar error recovery tuning.
 
-# Screenshots
-
-![cypher_syntax_highlight](screenshots/cypher.png)
 
 # Development
 
