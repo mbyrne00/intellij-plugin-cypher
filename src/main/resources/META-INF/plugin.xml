@@ -2,7 +2,7 @@
     <id>com.neueda4j.intellij.plugin.cypher</id>
     <name>Cypher</name>
     <!-- Should be automatically replaced by gradle build -->
-    <version>0.1.1</version>
+    <version>9.9.9</version>
     <vendor email="dmitry@vrublevsky.me" url="https://vrublevsky.me">Dmitry Vrublevsky</vendor>
 
     <description><![CDATA[
@@ -10,12 +10,27 @@
     ]]></description>
 
     <change-notes><![CDATA[
-        0.1.2 Parser error reporting improved.
-        <br><br>
-        0.1.1 Bugfix - numbers can be used in identifiers
-        <br><br>
-        0.1.0 Basic Cypher support - highlight, errors, commenting.
+        <b>0.1.3</b><br>
+        Semicolon at the end of the statement is now optional.<br>
+        Improved highlight settings - curly/square braces can be customized separately.<br>
+        Cypher is automatically injected into:
+        <ul>
+            <li>SDN @Query annotation</li>
+            <li>Neo4j OGM Session::execute and Session::query calls</li>
+            <li>GraphDatabaseService::execute calls</li>
+        </ul>
         <br>
+
+        <b>0.1.2</b><br>
+        Parser error reporting improved.<br>
+        <br>
+
+        <b>0.1.1</b><br>
+        Bugfix - numbers can be used in identifiers<br>
+        <br>
+
+        <b>0.1.0</b><br>
+        Basic Cypher support - highlight, errors, commenting.<br>
         ]]></change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->

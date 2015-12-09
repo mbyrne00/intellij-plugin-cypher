@@ -4,8 +4,8 @@ Cypher Intellij Plugin
 
 Plugin provides [Cypher](http://www.opencypher.org/) query language support for Jetbrains IDE family.
 
-**WARNING:** Currently plugin is in alpha-stage. If any bugs, incompatibilities or other issues occurs - report
-by creating issue on Github.
+**WARNING:** Currently plugin is in alpha-stage.
+If any bugs, incompatibilities or other issues occurs - report by creating issue on Github.
 
 # Features
 
@@ -22,7 +22,8 @@ by creating issue on Github.
 
 Plugin is available via Jetbrains repositories.
 
-Go to `Preferences` -> `Plugins` -> `Browser repositories...` and search for "Cypher". Install plugin and restart your IDE.
+Go to `Preferences` -> `Plugins` -> `Browser repositories...` and search for "Cypher".
+Install plugin and restart your IDE.
 
 # Supported Jetbrains products
 
@@ -45,6 +46,8 @@ without any issues.
 
 # Screenshots
 
+Screenshot contains several custom highlight settings.
+
 ![cypher_syntax_highlight](screenshots/cypher.png)
 
 # Roadmap
@@ -54,7 +57,6 @@ without any issues.
 3. Code completion.
 4. References (find usages/renaming/etc).
 5. Grammar error recovery tuning.
-
 
 # Development
 
