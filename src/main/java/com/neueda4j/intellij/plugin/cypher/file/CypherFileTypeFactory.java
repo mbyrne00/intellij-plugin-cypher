@@ -13,6 +13,6 @@ public class CypherFileTypeFactory extends FileTypeFactory {
 
     @Override
     public void createFileTypes(@NotNull FileTypeConsumer fileTypeConsumer) {
-        fileTypeConsumer.consume(CypherFileType.INSTANCE, "cyp");
+        fileTypeConsumer.consume(CypherFileType.INSTANCE, "cyp;cypher");
     }
 }
